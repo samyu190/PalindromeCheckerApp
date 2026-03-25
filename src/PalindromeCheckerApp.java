@@ -1,7 +1,20 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-       System.out.println("Welcome to the palindrome Checker Mangement System");
-       System.out.println("Version : 1.0");
-       System.out.println("System initialized successfully.");
+        String str ="MOM";
+        String rev ="";
+
+        for (int i = str.length() -1;
+             i>= 0;i--){
+
+            rev = rev + str.charAt(i);
+        }
+        if(str.equals(rev)){
+            System.out.println("It is a palindrome");
+
+
+        }
+        else{
+            System.out.println("It is not a palindrome");
+        }
     }
 }

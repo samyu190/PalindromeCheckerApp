@@ -1,20 +1,37 @@
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        String str ="MOM";
-        String rev ="";
+        Scanner sc =new Scanner(System.in);
 
-        for (int i = str.length() -1;
-             i>= 0;i--){
+        System.out.print("Enter a string : ");
+        String original = sc.nextLine();
 
-            rev = rev + str.charAt(i);
+        char[] arr = original.toCharArray();
+
+        int start = 0;
+        int end = arr.length -1;
+        boolean ispalindrome = true;
+
+        while(start<end){
+            if(arr [start ] != arr [end]){
+                ispalindrome = false;
+                break;
+            }
+            start++;
+            end--;
         }
-        if(str.equals(rev)){
-            System.out.println("It is a palindrome");
-
+        if (ispalindrome){
+            System.out.println("Palindrome");
 
         }
         else{
-            System.out.println("It is not a palindrome");
+            System.out.println("not Palindrome");
         }
+        sc.close();
+
+
+
+
     }
 }
